@@ -1,3 +1,5 @@
+// FIRST PART
+
 /**
  * @returns fulfilled promise that will resolve with the string 'done'
  */
@@ -18,4 +20,14 @@ function secondPromise() {
  */
 function thirdPromise(isError) {
   /* Write your code here */
+}
+
+// SECOND PART
+
+function fourthPromise() {
+  /* firstPromise.then() */
+}
+
+function fifthPromise() {
+ /* Implement try catch statement */
 }

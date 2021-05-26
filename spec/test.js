@@ -20,4 +20,10 @@ describe("Test for myPromise", function () {
       return thirdPromise(false).then((res) => expect(res).toEqual("done"));
     });
   });
+
+  describe("async/await", function () {
+    it("should return a fulfilled promise with value done", function () {
+      return fourthPromise().then(res => expect(res).toEqual("done"));
+    });
+  });
 });
