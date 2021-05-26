@@ -21,6 +21,6 @@ function fourthPromise() {
 }
 
 /* Make a change to transform this function to a async function */
-async function fifthPromise(isError) {
+function fifthPromise(isError) {
   /* Implement try catch statement */
 }
