@@ -1,33 +1,26 @@
 // FIRST PART
 
-/**
- * @returns fulfilled promise that will resolve with the string 'done'
- */
 function firstPromise() {
   /* Write your code here */
 }
 
-/**
- * @returns rejected promise that will reject with the string 'error'
- */
 function secondPromise() {
   /* Write your code here */
 }
 
-/**
- * @param  { boolean } isError
- * @returns the corresponded string depending on the isError param
- */
 function thirdPromise(isError) {
   /* Write your code here */
 }
 
-// SECOND PART
+// SECOND PART ASYNC/AWAIT
 
+/* Make a change to transform this function to a async function */
 function fourthPromise() {
-  /* firstPromise.then() */
+  /* Change this with async/await*/
+  firstPromise.then();
 }
 
-function fifthPromise() {
- /* Implement try catch statement */
+/* Make a change to transform this function to a async function */
+async function fifthPromise(isError) {
+  /* Implement try catch statement */
 }

@@ -22,8 +22,20 @@ describe("Test for myPromise", function () {
   });
 
   describe("async/await", function () {
-    it("should return a fulfilled promise with value done", function () {
-      return fourthPromise().then(res => expect(res).toEqual("done"));
+    describe("fourthPromise()", function () {
+      it("should return a fulfilled promise with value done", function () {
+        return fourthPromise().then((res) => expect(res).toEqual("done"));
+      });
+    });
+
+    describe("fifthPromise()", function () {
+      it("should return a fulfilled promise with value done", function () {
+        return fifthPromise(false).then((res) => expect(res).toEqual("done"));
+      });
+
+      it("should return a rejected promise with value error", function () {
+        return fifthPromise(true).then((res) => expect(res).toEqual("error"));
+      });
     });
   });
 });
