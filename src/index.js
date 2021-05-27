@@ -17,10 +17,10 @@ function thirdPromise(isError) {
 /* Make a change to transform this function to a async function */
 function fourthPromise() {
   /* Change this with async/await*/
-  firstPromise.then();
+  firstPromise().then();
 }
 
 /* Make a change to transform this function to a async function */
 function fifthPromise(isError) {
-  /* Implement try catch statement */
+  /* Write your code here */
 }

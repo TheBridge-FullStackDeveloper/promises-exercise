@@ -34,7 +34,7 @@ describe("Test for myPromise", function () {
       });
 
       it("should return a rejected promise with value error", function () {
-        return fifthPromise(true).then((res) => expect(res).toEqual("error"));
+        return fifthPromise(true).then((res) => expect(res.message).toEqual("error"));
       });
     });
   });
