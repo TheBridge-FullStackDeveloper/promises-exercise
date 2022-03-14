@@ -1,15 +1,29 @@
 // FIRST PART
 
 function firstPromise() {
-  /* Write your code here */
+  const firstPromise = new Promise((res) => {
+      res('done');
+  });
+  return firstPromise
 }
 
+
 function secondPromise() {
-  /* Write your code here */
+  const secondPromise = new Promise((res, rej) => {
+    rej('error')
+    res('done');
+});
+return secondPromise
 }
 
 function thirdPromise(isError) {
-  /* Write your code here */
+  const thirdPromise = new Promise((res, rej) => {
+    if (isError === true) {
+      rej('error')
+    }
+      res('done');
+});
+return thirdPromise
 }
 
 // SECOND PART ASYNC/AWAIT
@@ -17,7 +31,7 @@ function thirdPromise(isError) {
 /* Make a change to transform this function to a async function */
 function fourthPromise() {
   /* Change this with async/await*/
-  firstPromise().then();
+  return firstPromise().then();
 }
 
 /* Make a change to transform this function to a async function */
