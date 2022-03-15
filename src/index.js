@@ -20,8 +20,10 @@ function thirdPromise(isError) {
   const thirdPromise = new Promise((res, rej) => {
     if (isError === true) {
       rej('error')
-    }
+    } else {
       res('done');
+    }
+      
 });
 return thirdPromise
 }
@@ -29,12 +31,20 @@ return thirdPromise
 // SECOND PART ASYNC/AWAIT
 
 /* Make a change to transform this function to a async function */
-function fourthPromise() {
+async function fourthPromise() {
   /* Change this with async/await*/
-  return firstPromise().then();
+  return await firstPromise();
 }
 
 /* Make a change to transform this function to a async function */
-function fifthPromise(isError) {
-  /* Write your code here */
+async function fifthPromise(isError) {
+  let result
+  
+  try {
+    result = await thirdPromise(isError)
+  } catch (isError) {
+    result = new Error (isError)
+    //result = { message: isError }
+  }
+  return result
 }
