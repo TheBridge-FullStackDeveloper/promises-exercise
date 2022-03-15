@@ -36,5 +36,13 @@ async function fourthPromise() {
 
 /* Make a change to transform this function to a async function */
 async function fifthPromise(isError) {
-  return await thirdPromise(isError)
+  let result
+  
+  try {
+    result = await thirdPromise(isError)
+  } catch (isError) {
+    result = new Error (isError)
+    //result = { message: isError }
+  }
+  return result
 }
