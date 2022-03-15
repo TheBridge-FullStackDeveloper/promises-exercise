@@ -1,26 +1,40 @@
 // FIRST PART
 
 function firstPromise() {
-  /* Write your code here */
+  const myFirstPromise = new Promise((res) =>{
+    return res('done')
+  })
+ return myFirstPromise
 }
 
 function secondPromise() {
-  /* Write your code here */
+  const secondPromise = new Promise((res,rej) =>{
+    res('done')
+    rej('error')
+  })
+ return secondPromise
 }
 
 function thirdPromise(isError) {
-  /* Write your code here */
+  const thirdPromise = new Promise((res, rej) =>{
+    if(!isError){
+      return res('done')
+    }else{
+      return rej('error')
+    } 
+  })
+ return thirdPromise
 }
 
 // SECOND PART ASYNC/AWAIT
 
 /* Make a change to transform this function to a async function */
-function fourthPromise() {
+async function fourthPromise() {
   /* Change this with async/await*/
-  firstPromise().then();
+  return await firstPromise()
 }
 
 /* Make a change to transform this function to a async function */
-function fifthPromise(isError) {
-  /* Write your code here */
+async function fifthPromise(isError) {
+  return await thirdPromise(isError)
 }
